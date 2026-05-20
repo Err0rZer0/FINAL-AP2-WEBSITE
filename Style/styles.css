@@ -616,11 +616,20 @@ body {
     font-size: 1.5rem;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
-    background-color: var(--terracotta);
+.filter-btn {
+    background: linear-gradient(135deg, var(--terracotta) 0%, var(--clay-light) 100%);
     color: white;
-    border-color: transparent;
+    border: none;
+    box-shadow: 0 6px 16px rgba(188, 108, 37, 0.15);
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(135deg, #d28d46 0%, #e7b679 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(188, 108, 37, 0.22);
 }
 
 @media (max-width: 767.98px) {
